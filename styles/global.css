@@ -1,0 +1,104 @@
+body {
+    background: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    display: flex;
+    width: 97%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: auto;
+    gap: 1rem;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 90%;
+    background: linear-gradient(90deg,
+    rgba(255, 0, 0, 0) 0%,
+    rgba(255, 82, 82, 0.8) 15%,
+    rgba(255, 51, 51, 1) 30%,
+    rgba(220, 20, 60, 1) 50%,
+    rgba(178, 34, 34, 1) 70%,
+    rgba(139, 0, 0, 0.8) 85%,
+    rgba(255, 0, 0, 0) 100%
+    );
+    border-radius: 10px;
+}
+
+.header-menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.header-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.header-menu a:hover {
+    color: #ff3f3f;
+    text-shadow: #ff3f3f 1px 0 10px;
+}
+
+.header-logo {
+    height: 3.5rem;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.hero-img {
+    width: 500px;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title {
+    animation: titleAnimation 5s infinite alternate;
+    font-size: 3rem;
+}
+
+@keyframes titleAnimation {
+    0% {
+        text-shadow: #fff 1px 0 30px;
+    }
+    90% {
+        text-shadow: #fff 1px 0 1px;
+    }
+    94% {
+        opacity: 1;
+    }
+    98% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
